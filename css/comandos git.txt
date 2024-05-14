@@ -1,14 +1,7 @@
 
 hp@Laptop-David MINGW64 ~/Desktop
 $ git clone https://github.com/DavidReds7/Proyecto-Manhattan.git
-Cloning into 'Proyecto-Manhattan'...
-remote: Enumerating objects: 6, done.
-remote: Counting objects: 100% (6/6), done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
-Receiving objects: 100% (6/6), done.
 
-hp@Laptop-David MINGW64 ~/Desktop
 $ cd Proyecto-Manhattan
 
 hp@Laptop-David MINGW64 ~/Desktop/Proyecto-Manhattan (main)
