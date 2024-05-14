@@ -1,0 +1,14 @@
+
+body{
+    display: flex;
+    font-family: Maiandra GD;
+    align-items: center;
+}
+
+h1{
+    font-size: 30pt;
+}
+
+.divF{
+    text-align: center;
+}
