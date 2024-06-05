@@ -20,41 +20,33 @@ h1{
 }
 
 .img_utez{
-    height: 9%;
-    display: flex;
+    height: 8%;
     position: fixed;
     bottom: 1.8%;
     left: 7%;
 }
 
 .proy_logo{
-    height: 9%;
-    display: flex;
+    height: 8%;
     position: fixed;
     bottom: 2%;
     right: 5%;
 }
 
-.btn btn-outline-primary me-2{
+.btn.btn-outline-primary.me-2 {
     position: fixed;
 }
 
 .img_wom{
     position: relative;
-    height: 85% ;
-    bottom: -10%;
+    height: 85%;
 }
 
 @media screen and (max-width: 600px) {
     .img_wom{
-        position: absolute;
-        left: 30%;
-        top: 30%;
+        left: 80%;
+        bottom: 10%;
     }
-}
-
-.d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom{
-    background-color: #20c997;
 }
 
 #MYBTN{
@@ -64,9 +56,5 @@ h1{
     font-size: 16pt;
     padding: 10px 20px;
     bottom: 43%;
-    height: 8%;
-}
-
-.btn{
-    font-size: 16pt;
+    height: 8%;   
 }
