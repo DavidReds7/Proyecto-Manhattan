@@ -2,7 +2,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    /*background: linear-gradient(to bottom, #D2D2D2, 10%, #fff 15% );*/
     background-image: url('../img/Lovepik_com-400143419-gray-bottom-geometry.jpg');
     background-size: cover;
 }
@@ -18,15 +17,6 @@ footer {
 
 h1{
     color: black;
-}
-
-/*.col{
-    background-color: blue;
-    margin: auto;
-    border: #20c997;
-}*/
-.row{
-
 }
 
 .img_utez{
@@ -46,13 +36,10 @@ h1{
 }
 
 .btn btn-outline-primary me-2{
-    /*display: flex;*/
     position: fixed;
-    left: 100%;
 }
 
 .img_wom{
-    /*display: flex;*/
     position: relative;
     height: 85% ;
     bottom: -10%;
@@ -60,13 +47,11 @@ h1{
 
 @media screen and (max-width: 600px) {
     .img_wom{
-        /* Cambia la posición de la imagen para pantallas pequeñas */
         position: absolute;
         left: 30%;
         top: 30%;
     }
 }
-
 
 .d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom{
     background-color: #20c997;
@@ -74,8 +59,10 @@ h1{
 
 #MYBTN{
     display: flex;
-    position: absolute;
-    right: 25%;
+    justify-content: center;
+    align-items: center;
+    font-size: 16pt;
+    padding: 10px 20px;
     bottom: 43%;
     height: 8%;
 }

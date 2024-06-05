@@ -2,57 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCAD</title>
     <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/Styles_main.css'>
+    <style>
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16pt;
+            padding: 10px 20px;
+        }
+        
+        .encabezado {
+            font-size: 2.5em;
+        }
+        .encabezado2 {
+            font-size: 2em;
+        }
+        .parrafo {
+            font-size: 1em;
+        }
 
+        @media (max-width: 600px) {
+            .encabezado {
+                font-size: 1.5em;
+            }
+            .encabezado2 {
+                font-size: 1.2em;
+            }
+            .parrafo {
+                font-size: 0.9em;
+            }
+        }
+    </style>
 </head>
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom ">
-    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-    </a>
-
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="http://www.utez.edu.mx/" class="nav-link px-2 link-secondary">Utez</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-    </ul>
-
-    <div class="col-md-3 text-end">
-        <!--<button type="button" class="btn btn-outline-primary me-2">Iniciar Sesion</button>-->
-
-    </div>
-</header>
 <body>
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
 
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="http://www.utez.edu.mx/" class="nav-link px-2 link-secondary">Utez</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+        </ul>
 
-<div class="container">
-    <div class="row">
-        <h1>Bienvenido a SCAD</h1>
-        <h2>Sistema de Control de Activos DATID</h2>
-
-    </div>
-    <div class="row">
-
-        <div class="col">
-            <img src="img/img.png" class="img_wom">
+        <div class="col-md-3 text-end">
+            <!-- Botón de iniciar sesión puede ir aquí si es necesario -->
         </div>
+    </header>
 
-        <div class="col">
-            <h2> ¿Qué soy?</h2>
-            <p>Soy una aplicación web cuya función es la de facilitar al personal DATID
-                una manera de llevar un control más acertado de los activos con los que cuenta,
-            además de brindar apoyo a las revisiones periódicas que se realizan en esta división academica.</p>
-            <button ID="MYBTN" type="button" class="btn btn-outline-primary me-2"><h2 class="btn">Iniciar Sesión</h2></button>
+    <div class="container">
+        <div class="row">
+            <h1 class="encabezado">Bienvenido a SCAD</h1>
+            <h2 class="encabezado2">Sistema de Control de Activos DATID</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/img.png" alt="Woman" class="img-fluid d-none d-md-block">
+            </div>
+            <div class="col-md-6">
+                <br>
+                <h2 class="encabezado2">¿Qué soy?</h2>
+                <p class="parrafo">Soy una aplicación web cuya función es la de facilitar al personal DATID
+                   una manera de llevar un control más acertado de los activos con los que cuenta,
+                   además de brindar apoyo a las revisiones periódicas que se realizan en esta división académica.</p>
+                <button id="MYBTN" type="button" class="btn btn-outline-primary me-2">Iniciar Sesión</button>
+            </div>
         </div>
     </div>
 
-</div>
+    <footer class="d-flex justify-content-between align-items-center p-3">
+        <img class="img_utez" src="img/images-removebg-preview%20(1).png" alt="Logo UTEZ">
+        <img src="img/image%20(1).png" class="proy_logo" alt="Logo Proyecto">
+    </footer>
 </body>
-<footer>
-    <img class="img_utez" src="img/images-removebg-preview%20(1).png">
-    <img src="img/image%20(1).png" class="proy_logo">
-</footer>
 </html>
