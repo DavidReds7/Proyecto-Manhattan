@@ -34,12 +34,14 @@ h1{
 }
 
 .btn.btn-outline-primary.me-2 {
-    position: fixed;
-}
-
-.img_wom{
-    position: relative;
-    height: 85%;
+    margin-left: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16pt;
+    padding: 15px 25px;
+    bottom: 43%;
+    height: 8%;  
 }
 
 @media screen and (max-width: 600px) {
@@ -49,12 +51,40 @@ h1{
     }
 }
 
-#MYBTN{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16pt;
-    padding: 10px 20px;
-    bottom: 43%;
-    height: 8%;   
+.encabezado {
+    font-size: 2.5em;
+}
+.encabezado2 {
+    font-size: 2em;
+}
+.parrafo {
+    font-size: 1em;
+}
+
+.blur {
+    background-color: rgba(255, 255, 255, 0.088);
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 5px 5px; /* Espacio dentro del rectángulo */
+    backdrop-filter: blur(100px); /* Efecto de desenfoque en el fondo */
+    -webkit-backdrop-filter: blur(10px); /* Efecto de desenfoque para Safari */
+}
+
+.blur2 {
+    background-color: rgba(0, 102, 255, 0.173); /* Fondo blanco semitransparente */
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 5px 5px; /* Espacio dentro del rectángulo */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+    -webkit-backdrop-filter: blur(10px); /* Efecto de desenfoque para Safari */
+}
+
+@media (max-width: 600px) {
+    .encabezado {
+        font-size: 1.5em;
+    }
+    .encabezado2 {
+        font-size: 1.2em;
+    }
+    .parrafo {
+        font-size: 0.9em;
+    }
 }
