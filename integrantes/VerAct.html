@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con Botones de Eliminar</title>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/bootstrap.css'>
 </head>
 <body>
-
-<center><h1>Activos</h1></center>
-
-<table class="table ocu" id="table" >
+<table id="table" class="table">
     <thead>
     <tr>
-        <th>Id Activo</th>
-        <th>Activo</th>
-        <th>Descripcion</th>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
         <th>Especificaciones</th>
         <th>Marca</th>
         <th>Modelo</th>
         <th>Serie</th>
         <th>Observaciones</th>
-        <th>Ubicacion</th>
+        <th>Ubicación</th>
         <th>Eliminar</th>
         <th>Actualizar</th>
     </tr>
     </thead>
     <tbody>
+    <!-- Aquí se añadirán las filas dinámicamente -->
     </tbody>
-
 </table>
-
-
 
 <script>
     // Función para obtener parámetros de la URL
@@ -50,6 +46,25 @@
     const Observaciones = [];
     const Ubicacion = [];
 
+    IdAct[0] = "0019";
+    NameAct[0] = "Proyector";
+    Descripcion[0] = "Proyector 1"
+    EspAct[0] = "Lampara de 500lm"
+    ModeloAct[0] = "ls3100";
+    SerieAct[0] = "S1500";
+    Observaciones[0] = "ninguna";
+    Ubicacion[0] = "Doc1 S4";
+    MarcaAct[0] = "Epson";
+
+    IdAct[1] = "0019";
+    NameAct[1] = "Proyector";
+    Descripcion[1] = "Proyector 1"
+    EspAct[1] = "Lampara de 500lm"
+    ModeloAct[1] = "ls3100";
+    SerieAct[1] = "S1500";
+    Observaciones[1] = "ninguna";
+    Ubicacion[1] = "Doc1 S4";
+    MarcaAct[1] = "Epson";
 
     // Obtener los valores de los parámetros
     IdAct[2] = getParameter("IdAct");
@@ -65,69 +80,97 @@
     console.log("id : " + IdAct[2]);
     console.log("act es: " + NameAct[2]);
     console.log("Descripcion :" + Descripcion[2]);
-    console.log("especificaciones :"+EspAct[2]);
-    console.log("MarcaAct:"+MarcaAct[2]);
-    console.log("modelo :"+ModeloAct[2]);
-    console.log("serie : "+SerieAct[2]);
-    console.log("ovservaciones : "+Observaciones[2]);
-    console.log("ubicaciones : "+Ubicacion[2]);
+    console.log("especificaciones :" + EspAct[2]);
+    console.log("MarcaAct:" + MarcaAct[2]);
+    console.log("modelo :" + ModeloAct[2]);
+    console.log("serie : " + SerieAct[2]);
+    console.log("ovservaciones : " + Observaciones[2]);
+    console.log("ubicaciones : " + Ubicacion[2]);
 
-    /*
-    document.getElementById("nameSet").innerText ="Su nombre es: "+ name;
-    document.getElementById("apSet").innerText ="Sus apellidos son: " +ap;
-    email="'mailto:'"+email;
-    document.getElementById("emailLink").href = email;
-    document.getElementById("edadSet").innerText="Su edad es: "+edad;
-    href: "tel:teléfono"
-    tel="'tel:'"+tel;
-    document.getElementById("telSet").href = tel;
-    document.getElementById("userSet").innerText="su usuario es: "+user;
-    */
-    function tabla() {
-        /*name = document.getElementById("nombre").value;
-        tipo = document.getElementById("tipo").value;
-        edad = document.getElementById("edad").value;
-        food = document.getElementById("food").value;
-        email = document.getElementById("email").value;
+    function eliminar(i) {
+        // Eliminar el elemento de los arrays
+        IdAct.splice(i, 1);
+        NameAct.splice(i, 1);
+        Descripcion.splice(i, 1);
+        EspAct.splice(i, 1);
+        MarcaAct.splice(i, 1);
+        ModeloAct.splice(i, 1);
+        SerieAct.splice(i, 1);
+        Observaciones.splice(i, 1);
+        Ubicacion.splice(i, 1);
 
-
-        document.getElementById("Tname").innerText = name;
-        document.getElementById("Ttipo").innerText = tipo;
-        document.getElementById("Tedad").innerText = edad;
-        document.getElementById("Tfood").innerText = food;
-        document.getElementById("Temail").innerText = email;*/
-
-        const fila = document.createElement('tr');
-        const celdaNombre = document.createElement('td');
-        celdaNombre.textContent = name;
-        fila.appendChild(celdaNombre);
-
-        const celdatipo = document.createElement('td');
-        celdatipo.textContent = tipo;
-        fila.appendChild(celdatipo);
-
-        const celEdad = document.createElement('td');
-        celEdad.textContent = edad;
-        fila.appendChild(celEdad);
-
-        const celdaFood = document.createElement('td');
-        celdaFood.textContent = food;
-        fila.appendChild(celdaFood);
-
-        const celdaEmail = document.createElement('td');
-        celdaEmail.textContent = email;
-        fila.appendChild(celdaEmail);
-
-        let table = document.getElementById("table");
-        table.classList.remove("ocu");
-        /*table.style.display="block";*/
-        table.appendChild(fila);
-
+        // Recargar la tabla
+        cargarTabla();
     }
 
-    tabla();
+    function cargarTabla() {
+        const tableBody = document.querySelector("#table tbody");
+        tableBody.innerHTML = ""; // Limpiar el cuerpo de la tabla
+
+        for (let i = 0; i < IdAct.length; i++) {
+            const fila = document.createElement('tr');
+
+            const celdaid = document.createElement('td');
+            celdaid.textContent = IdAct[i];
+            fila.appendChild(celdaid);
+
+            const celdaname = document.createElement('td');
+            celdaname.textContent = NameAct[i];
+            fila.appendChild(celdaname);
+
+            const celDes = document.createElement('td');
+            celDes.textContent = Descripcion[i];
+            fila.appendChild(celDes);
+
+            const celdaesp = document.createElement('td');
+            celdaesp.textContent = EspAct[i];
+            fila.appendChild(celdaesp);
+
+            const celdmarca = document.createElement('td');
+            celdmarca.textContent = MarcaAct[i];
+            fila.appendChild(celdmarca);
+
+            const celdmodelo = document.createElement('td');
+            celdmodelo.textContent = ModeloAct[i];
+            fila.appendChild(celdmodelo);
+
+            const celdaserie = document.createElement('td');
+            celdaserie.textContent = SerieAct[i];
+            fila.appendChild(celdaserie);
+
+            const celdaovs = document.createElement('td');
+            celdaovs.textContent = Observaciones[i];
+            fila.appendChild(celdaovs);
+
+            const celdaubicacion = document.createElement('td');
+            celdaubicacion.textContent = Ubicacion[i];
+            fila.appendChild(celdaubicacion);
+
+            const celdaEliminar = document.createElement('td');
+            const botonEliminar = document.createElement('button');
+            botonEliminar.textContent = "Eliminar";
+            botonEliminar.onclick = function () {
+                eliminar(i);
+            };
+            celdaEliminar.appendChild(botonEliminar);
+            fila.appendChild(celdaEliminar);
+
+            const celdaAct = document.createElement('td');
+            const botonAct = document.createElement('button');
+            botonAct.textContent = "Actualizar";
+            botonAct.onclick = function () {
+                eliminar(i);
+            };
+            celdaAct.appendChild(botonAct);
+            fila.appendChild(celdaAct);
 
 
+
+            tableBody.appendChild(fila);
+        }
+    }
+
+    cargarTabla(); // Inicializar la tabla con los datos actuales
 </script>
 </body>
 </html>
