@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/bootstrap.css'>
+</head>
+<body>
+
+<center><h1>Activos</h1></center>
+
+<table class="table ocu" id="table" >
+    <thead>
+    <tr>
+        <th>Id Activo</th>
+        <th>Activo</th>
+        <th>Descripcion</th>
+        <th>Especificaciones</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Serie</th>
+        <th>Observaciones</th>
+        <th>Ubicacion</th>
+        <th>Eliminar</th>
+        <th>Actualizar</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+
+</table>
+
+
+
+<script>
+    // Función para obtener parámetros de la URL
+    getParameter = (key) => {
+        address = window.location.search;
+        parameterList = new URLSearchParams(address);
+        return parameterList.get(key);
+    }
+
+    const IdAct = [];
+    const NameAct = [];
+    const Descripcion = [];
+    const EspAct = [];
+    const MarcaAct = [];
+    const ModeloAct = [];
+    const SerieAct = [];
+    const Observaciones = [];
+    const Ubicacion = [];
+
+
+    // Obtener los valores de los parámetros
+    IdAct[2] = getParameter("IdAct");
+    NameAct[2] = getParameter("NameAct");
+    Descripcion[2] = getParameter("Descripcion");
+    EspAct[2] = getParameter("EspAct");
+    MarcaAct[2] = getParameter("MarcaAct");
+    ModeloAct[2] = getParameter("ModeloAct");
+    SerieAct[2] = getParameter("SerieAct");
+    Observaciones[2] = getParameter("Observaciones");
+    Ubicacion[2] = getParameter("Ubicacion");
+
+    console.log("id : " + IdAct[2]);
+    console.log("act es: " + NameAct[2]);
+    console.log("Descripcion :" + Descripcion[2]);
+    console.log("especificaciones :"+EspAct[2]);
+    console.log("MarcaAct:"+MarcaAct[2]);
+    console.log("modelo :"+ModeloAct[2]);
+    console.log("serie : "+SerieAct[2]);
+    console.log("ovservaciones : "+Observaciones[2]);
+    console.log("ubicaciones : "+Ubicacion[2]);
+
+    /*
+    document.getElementById("nameSet").innerText ="Su nombre es: "+ name;
+    document.getElementById("apSet").innerText ="Sus apellidos son: " +ap;
+    email="'mailto:'"+email;
+    document.getElementById("emailLink").href = email;
+    document.getElementById("edadSet").innerText="Su edad es: "+edad;
+    href: "tel:teléfono"
+    tel="'tel:'"+tel;
+    document.getElementById("telSet").href = tel;
+    document.getElementById("userSet").innerText="su usuario es: "+user;
+    */
+    function tabla() {
+        /*name = document.getElementById("nombre").value;
+        tipo = document.getElementById("tipo").value;
+        edad = document.getElementById("edad").value;
+        food = document.getElementById("food").value;
+        email = document.getElementById("email").value;
+
+
+        document.getElementById("Tname").innerText = name;
+        document.getElementById("Ttipo").innerText = tipo;
+        document.getElementById("Tedad").innerText = edad;
+        document.getElementById("Tfood").innerText = food;
+        document.getElementById("Temail").innerText = email;*/
+
+        const fila = document.createElement('tr');
+        const celdaNombre = document.createElement('td');
+        celdaNombre.textContent = name;
+        fila.appendChild(celdaNombre);
+
+        const celdatipo = document.createElement('td');
+        celdatipo.textContent = tipo;
+        fila.appendChild(celdatipo);
+
+        const celEdad = document.createElement('td');
+        celEdad.textContent = edad;
+        fila.appendChild(celEdad);
+
+        const celdaFood = document.createElement('td');
+        celdaFood.textContent = food;
+        fila.appendChild(celdaFood);
+
+        const celdaEmail = document.createElement('td');
+        celdaEmail.textContent = email;
+        fila.appendChild(celdaEmail);
+
+        let table = document.getElementById("table");
+        table.classList.remove("ocu");
+        /*table.style.display="block";*/
+        table.appendChild(fila);
+
+    }
+
+    tabla();
+
+
+</script>
+</body>
+</html>

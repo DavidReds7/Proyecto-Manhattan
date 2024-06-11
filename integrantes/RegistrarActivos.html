@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/bootstrap.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/RegActi.css'>
+</head>
+<body>
+<br><br>
+
+
+<div class="container">
+    <div class="col form2">
+        <img src="../img/form_img.jpg" class="firm">
+    </div>
+    <div class="col form">
+        <h1 id="miId">Registrar Activo</h1>
+
+
+        <form id="myForm" action="VerAct.html" method="get" >
+            <div class="row">
+                <label class="form-label">No. de Activo:</label>
+                    <input type="text" name="IdAct" placeholder="Escriba el numero que identifica al articulo" required id="IdAct">
+
+            </div>
+            <br>
+            <div class="row">
+                <label>Activo:</label>
+                    <input type="text" name="NameAct" placeholder="¿Que es el articulo? computadora, proyector, etc." required id="NameAct">
+                    <br>
+
+            </div>
+            <br>
+
+            <div class="row">
+                <label>Descripcion:</label>
+                    <input type="text" name="Descripcion" placeholder="Escriba una descripcion del activo" required id="Descripcion">
+                    <br>
+
+            </div>
+            <br>
+
+            <div class="row">
+                <label>Especificaciones:</label>
+                    <input type="text" name="EspAct" required id="EspAct" placeholder="Ingrese las especificaciones del activo">
+
+            </div>
+            <br>
+
+            <div class="row">
+                <label>Marca:</label>
+                    <input type="text" id="MarcaAct" name="MarcaAct" required placeholder="Escriba la marca del activo">
+
+            </div>
+            <br>
+
+            <div class="row">
+                <label>Modelo:</label>
+                    <input type="text" name="ModeloAct" placeholder="Ingrese el modelo del activo" required id="ModeloAct">
+
+            </div>
+            <br>
+
+            <div class="row">
+                <label>No. de serie:</label>
+                    <input type="text" name="SerieAct" id="SerieAct" placeholder="Ingrese el numero de serie del activo">
+
+            </div>
+            <br>
+
+            <div class="row">
+                <label>Observaciones:</label>
+                    <input type="text" name="Observaciones" id="Observaciones" placeholder="Escriba las observaciones">
+
+            </div>
+<br>
+            <div class="row">
+                <label>Ubicacion:</label>
+                <input type="text" name="Ubicacion" id="Ubicacion">
+
+            </div>
+            <br>
+            <button type="submit" value="Registrar">Registrar</button>
+
+        </form>
+    </div>
+</div>
+<br><br>
+
+</body>
+</html>
